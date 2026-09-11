@@ -1,0 +1,29 @@
+{
+  "hospitals": [
+    {
+      "id": "hospital_A",
+      "name": "Hospital A",
+      "password": "passA"
+    },
+    {
+      "id": "hospital_B",
+      "name": "Hospital B",
+      "password": "passB"
+    },
+    {
+      "id": "hospital_C",
+      "name": "Hospital C",
+      "password": "passC"
+    },
+    {
+      "id": "admin@restaurant.com",
+      "name": "Max",
+      "password": "admin123"
+    },
+    {
+      "id": "admin@gmail.com",
+      "name": "MAX1",
+      "password": "admin123"
+    }
+  ]
+}

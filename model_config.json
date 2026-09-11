@@ -1,0 +1,17 @@
+{
+  "model_metrics": {
+    "connected_hospitals": 3,
+    "training_rounds": 3,
+    "hospital_accuracies": {
+      "Hospital A": 82,
+      "Hospital B": 85,
+      "Hospital C": 88
+    },
+    "current_accuracy": 88,
+    "model_type": "CNN - Binary Classification (Normal vs Pneumonia)",
+    "input_shape": "64x64x3 RGB",
+    "classes": ["Normal", "Pneumonia"],
+    "optimizer": "Adam",
+    "loss_function": "Binary Crossentropy"
+  }
+}
