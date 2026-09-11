@@ -314,14 +314,14 @@ This project is provided as-is for educational and research purposes.
 
 1. **Setup:** Run `SETUP_AND_RUN.bat`
 2. **Start:** Open 2 terminals and run backend + frontend
-3. **Access:** Open http://localhost:3000
+3. **Access:** Open https://healthcare-ai-wxej-juza3qtjh-ritikas-projects-0a7d0cb3.vercel.app/
 4. **Test:** Upload an X-ray image for prediction
 
 ---
 
 ## 📝 Notes
 
-- Backend API documentation: http://127.0.0.1:8000/docs
+- Backend API documentation: https://healthcare-ai-backend-0kal.onrender.com/docs
 - Default model input: 64×64 RGB images
 - Predictions: Real-time with confidence scores
 - Federated learning: Optional (requires all hospital clients)
