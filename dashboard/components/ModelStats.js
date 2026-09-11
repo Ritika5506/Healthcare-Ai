@@ -17,7 +17,7 @@ const ModelStats = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/model-stats")
+      .get("https://healthcare-ai-backend-0kal.onrender.com/model-stats")
       .then((res) => setModelStats(res.data))
       .catch((err) => console.error(err))
       .finally(() => setLoading(false));

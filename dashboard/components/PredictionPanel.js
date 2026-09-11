@@ -23,7 +23,7 @@ const PredictionPanel = () => {
   useEffect(() => {
     // Load sample images
     axios
-      .get("http://127.0.0.1:8000/sample-images")
+      .get("https://healthcare-ai-backend-0kal.onrender.com/sample-images")
       .then((res) => setSampleImages(res.data))
       .catch((err) => console.error("Error loading samples:", err));
   }, []);
@@ -47,7 +47,7 @@ const PredictionPanel = () => {
     formData.append("file", selectedFile);
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/predict", formData, {
+      const res = await axios.post("https://healthcare-ai-backend-0kal.onrender.com/predict", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setPrediction(res.data);
@@ -65,7 +65,7 @@ const PredictionPanel = () => {
     
     // Fetch and display the sample
     axios
-      .get(`http://127.0.0.1:8000/sample-image/${category}/${filename}`, {
+      .get(`https://healthcare-ai-backend-0kal.onrender.com/sample-image/${category}/${filename}`, {
         responseType: "blob",
       })
       .then((res) => {

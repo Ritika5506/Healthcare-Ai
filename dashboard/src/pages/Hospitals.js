@@ -8,7 +8,7 @@ const Hospitals = () => {
   const [hospitalStats, setHospitalStats] = useState({});
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/training")
+    axios.get("https://healthcare-ai-backend-0kal.onrender.com/training")
       .then(res => {
         setTrainingData(res.data);
         // Aggregate data by hospital

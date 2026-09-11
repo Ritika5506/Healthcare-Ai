@@ -68,7 +68,7 @@ const FederatedLearning = () => {
 
   useEffect(() => {
     // Fetch data from backend for reference
-    // axios.get("http://127.0.0.1:8000/status")
+    // axios.get("https://healthcare-ai-backend-0kal.onrender.com/status")
     //   .then((res) => console.log("Backend status:", res.data))
     //   .catch((err) => console.error("Error:", err));
 

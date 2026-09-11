@@ -11,11 +11,11 @@ const ModelMetrics = () => {
   const [status, setStatus] = useState({});
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/model-stats")
+    axios.get("https://healthcare-ai-backend-0kal.onrender.com/model-stats")
       .then(res => setMetrics(res.data))
       .catch(err => console.error("Error fetching model stats:", err));
 
-    axios.get("http://127.0.0.1:8000/status")
+    axios.get("https://healthcare-ai-backend-0kal.onrender.com/status")
       .then(res => setStatus(res.data))
       .catch(err => console.error("Error fetching status:", err));
   }, []);

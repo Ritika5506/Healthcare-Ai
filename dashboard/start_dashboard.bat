@@ -11,7 +11,7 @@ echo ============================================
 echo.
 echo URL: http://localhost:3000
 echo.
-echo Make sure backend is running on http://127.0.0.1:8000
+echo Make sure backend is running on https://healthcare-ai-backend-0kal.onrender.com
 echo.
 
 REM Check if node_modules exists

@@ -22,13 +22,13 @@ const PredictionPanel = () => {
   useEffect(() => {
     // Load sample images
     axios
-      .get("http://127.0.0.1:8000/sample-images")
+      .get("https://healthcare-ai-backend-0kal.onrender.com/sample-images")
       .then((res) => setSampleImages(res.data))
       .catch((err) => console.error("Error loading samples:", err));
     // If logged in, load hospital's own samples
     const token = localStorage.getItem('hfai_token');
     if (token) {
-      axios.get("http://127.0.0.1:8000/my-samples", { headers: { Authorization: `Bearer ${token}` } })
+      axios.get("https://healthcare-ai-backend-0kal.onrender.com/my-samples", { headers: { Authorization: `Bearer ${token}` } })
         .then((res) => {
           if (res.data.files) {
             setSampleImages((s) => ({ ...s, my: res.data.files }));
@@ -60,7 +60,7 @@ const PredictionPanel = () => {
       const token = localStorage.getItem('hfai_token');
       const headers = { "Content-Type": "multipart/form-data" };
       if (token) headers.Authorization = `Bearer ${token}`;
-      const res = await axios.post("http://127.0.0.1:8000/predict", formData, { headers });
+      const res = await axios.post("https://healthcare-ai-backend-0kal.onrender.com/predict", formData, { headers });
       setPrediction(res.data);
     } catch (err) {
       console.error("Prediction error:", err);
@@ -80,9 +80,9 @@ const PredictionPanel = () => {
     const form = new FormData();
     for (let i = 0; i < files.length; i++) form.append('files', files[i]);
     try {
-      await axios.post('http://127.0.0.1:8000/upload-data', form, { headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'multipart/form-data' } });
+      await axios.post('https://healthcare-ai-backend-0kal.onrender.com/upload-data', form, { headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'multipart/form-data' } });
       // refresh my samples
-      const res = await axios.get("http://127.0.0.1:8000/my-samples", { headers: { Authorization: `Bearer ${token}` } });
+      const res = await axios.get("https://healthcare-ai-backend-0kal.onrender.com/my-samples", { headers: { Authorization: `Bearer ${token}` } });
       setSampleImages((s) => ({ ...s, my: res.data.files }));
       alert('Uploaded');
     } catch (e) {
@@ -102,7 +102,7 @@ const PredictionPanel = () => {
       opts.headers = { Authorization: `Bearer ${token}` };
     }
 
-    axios.get(`http://127.0.0.1:8000/sample-image/${category}/${filename}`, opts)
+    axios.get(`https://healthcare-ai-backend-0kal.onrender.com/sample-image/${category}/${filename}`, opts)
       .then((res) => {
         const reader = new FileReader();
         reader.onload = (e) => setPreview(e.target.result);

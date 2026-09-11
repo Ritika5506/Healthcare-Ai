@@ -26,11 +26,11 @@ const Dash = () => {
   });
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/training")
+    axios.get("https://healthcare-ai-backend-0kal.onrender.com/training")
       .then(res => setTrainingData(res.data))
       .catch(err => console.error(err));
 
-    axios.get("http://127.0.0.1:8000/status")
+    axios.get("https://healthcare-ai-backend-0kal.onrender.com/status")
       .then(res => setStatus(res.data))
       .catch(err => console.error(err));
   }, []);

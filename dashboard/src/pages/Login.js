@@ -50,7 +50,7 @@ const Login = () => {
     }
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/login", { hospital_id: loginId, password: loginPassword });
+      const res = await axios.post("https://healthcare-ai-backend-0kal.onrender.com/login", { hospital_id: loginId, password: loginPassword });
       const { token, hospital_name } = res.data;
       localStorage.setItem("hfai_token", token);
       localStorage.setItem("hfai_hospital", hospital_name || loginId);
@@ -75,7 +75,7 @@ const Login = () => {
     }
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/signup", { hospital_id: hospitalId, name, password });
+      const res = await axios.post("https://healthcare-ai-backend-0kal.onrender.com/signup", { hospital_id: hospitalId, name, password });
       const { token, hospital_name } = res.data;
       localStorage.setItem("hfai_token", token);
       localStorage.setItem("hfai_hospital", hospital_name || name);
