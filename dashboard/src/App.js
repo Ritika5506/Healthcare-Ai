@@ -14,7 +14,7 @@ import FederatedLearning from "./pages/FederatedLearning";
 function AppContent() {
   const location = useLocation();
   const getToken = () => localStorage.getItem('hfai_token') || "";
-  const token = getToken();
+  
 
   const isLoginRoute = location.pathname === "/login";
 
